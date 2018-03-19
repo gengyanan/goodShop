@@ -4,6 +4,7 @@ import Index from '@/components/index'
 import GoodsShop from '@/components/goodShop'
 import Model from '@/components/modelPractice'
 import com from '@/components/component-pra'
+import comParent from '@/components/parentCom'
 Vue.use(Router)
 
 export default new Router({
@@ -26,8 +27,14 @@ export default new Router({
     },
     {
       path:'/com',
-      name:'com',
       component:com,
+      children:[
+        {
+          path:'com-parent',
+          name:'comParent',
+          component:comParent,
+        }
+      ],
     }
 
   ]

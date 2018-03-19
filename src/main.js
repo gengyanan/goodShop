@@ -8,7 +8,9 @@ import 'iview/dist/styles/iview.css'
 import '@/assets/style.css'
 Vue.config.productionTip = false
 Vue.use(router);
-Vue.use(iView)
+Vue.use(iView);
+var bus = new Vue();
+Vue.prototype.$bus = bus;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
