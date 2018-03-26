@@ -6,9 +6,14 @@ import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import '@/assets/style.css'
+import Mint from 'mint-ui'
+import 'mint-ui/lib/style.min.css'
+import focus from './directive/directive'
+import clickoutside from './comm/clickoutside'
 Vue.config.productionTip = false
 Vue.use(router);
 Vue.use(iView);
+Vue.use(Mint);
 var bus = new Vue();
 Vue.prototype.$bus = bus;
 /* eslint-disable no-new */

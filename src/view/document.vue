@@ -1,10 +1,12 @@
 <template>
-
+  <i-row>
+    我是document
+  </i-row>
 </template>
 
 <script>
     export default {
-        name: "slot-name"
+        name: "document"
     }
 </script>
 
