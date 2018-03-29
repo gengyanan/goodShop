@@ -15,7 +15,7 @@
 
 <script>
   import InputNumber from "./input-number";
-  import {timer} from "../directive/directive";
+  import {timer} from "../directive/index";
 
   export default {
     components: {InputNumber},

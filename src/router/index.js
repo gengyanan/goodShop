@@ -13,11 +13,19 @@ import Document from '@/view/document'
 import Content from '@/view/content'
 import TableList from '@/view/table-list'
 import Coms from '@/components/com'
+import MyObj from '@/mint-obj/mint-obj'
+
+
+import mHome from '@/mint-obj/mint-view/home'
+import newslist from '@/mint-obj/mint-view/news/newslist'
+import newsinfo from '@/mint-obj/mint-view/news/newsinfo'
+import error from '@/mint-obj/mint-view/error/error'
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  linkActiveClass:'is-active',
+  linkActiveClass: 'mui-active',
   routes: [
     {
       path: '/',
@@ -78,14 +86,44 @@ export default new Router({
       component: Content,
     },
     {
-      path:'/tablelist',
-      name:'TableList',
-      component:TableList,
+      path: '/tablelist',
+      name: 'TableList',
+      component: TableList,
     },
     {
-      path:'/coms',
-      name:'Coms',
-      component:Coms,
+      path: '/coms',
+      name: 'Coms',
+      component: Coms,
+    }, {
+      path: '/myobj',
+      name: 'myobj',
+      component: MyObj,
+      children: [
+        {
+          path: '/mhome',
+          name: 'mHome',
+          component: mHome,
+        },
+        {
+          path: '/news/newslist',
+          name: 'newslist',
+          component: newslist,
+        },
+        {
+          path: '/news/newsinfo/:id',
+          name: 'newsinfo',
+          component: newsinfo,
+        }
+
+      ]
+    },
+    {
+      path: '/error',
+      name: 'error',
+      component: error,
+    }, {
+      path: '*',
+      redirect: '/myobj',
     }
 
 
