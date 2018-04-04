@@ -8,6 +8,8 @@
       </div>
     </div>
     <div v-timer="timeNow"></div>
+
+
   </i-row>
 
 

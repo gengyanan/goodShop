@@ -114,7 +114,6 @@ export default new Router({
           name: 'newsinfo',
           component: newsinfo,
         }
-
       ]
     },
     {

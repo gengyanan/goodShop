@@ -4,6 +4,7 @@
       <p>分发的内容</p>
     </about>
     我是home
+
   </i-row>
 </template>
 

@@ -6,12 +6,15 @@
       <h2 >{{info.title}}</h2>
       <p class="tf">{{info.cparagraph}}</p>
     </div>
+   <common :id="id"></common>
   </section>
 </template>
 
 <script>
   import {Toast} from 'mint-ui'
+  import Common from "../subcom/common";
   export default {
+    components: {Common},
     name: "newsinfo",
     data(){
       return {
