@@ -10,7 +10,7 @@
         <div>
           <span>第{{index+1}}楼</span>
           <span offset="2">{{item.user_name}}</span>
-          <span v-time>{{item.add_time}}</span>
+          <span >{{item.add_time}}</span>
         </div>
         <ul class="mui-table-view">
           <li class="mui-table-view-cell">{{item.content}}</li>
@@ -48,7 +48,7 @@
             })
             return;
           }else{
-            let url='/postcomment/'+this.id;
+            let url='/api/postcomment/'+this.id;
             this.$axios.post(url  ,{
               content:this.postcontent
             }).then(rep=>{

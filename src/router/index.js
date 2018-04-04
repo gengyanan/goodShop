@@ -18,6 +18,7 @@ import MyObj from '@/mint-obj/mint-obj'
 
 import mHome from '@/mint-obj/mint-view/home'
 import newslist from '@/mint-obj/mint-view/news/newslist'
+import sharelist from '@/mint-obj/mint-view/share/sharelist'
 import newsinfo from '@/mint-obj/mint-view/news/newsinfo'
 import error from '@/mint-obj/mint-view/error/error'
 
@@ -108,6 +109,11 @@ export default new Router({
           path: '/news/newslist',
           name: 'newslist',
           component: newslist,
+        },
+        {
+          path: '/share/sharelist',
+          name: 'sharelist',
+          component: sharelist,
         },
         {
           path: '/news/newsinfo/:id',
