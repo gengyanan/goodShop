@@ -69,9 +69,11 @@ import AnchorSlot from '../comm/anchorSlot'
       },
       created(){
         this.change('img');
+
       },
       change(type){
         if(type==='img'){
+
           this.data={
             type:'img',
             url:'http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=false&word=%E8%B5%B5%E4%B8%BD%E9%A2%96&step_word=&hs=0&pn=34&spn=0&di=37943988940&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=2253646777%2C2987789342&os=2165246624%2C2279374941&simid=3466937226%2C307773995&adpicid=0&lpn=0&ln=3938&fr=&fmq=1523169060919_R&fm=&ic=0&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=star&bdtype=0&oriquery=&objurl=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201508%2F16%2F20150816012042_aPeVQ.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B17tpwg2_z%26e3Bv54AzdH3Frj5rsjAzdH3F4ks52AzdH3F9dlb089nnAzdH3F1jpwtsAzdH3F&gsm=0&rpstart=0&rpnum=0&islist=&querylist=',
