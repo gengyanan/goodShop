@@ -21,7 +21,7 @@ import newslist from '@/mint-obj/mint-view/news/newslist'
 import sharelist from '@/mint-obj/mint-view/share/sharelist'
 import newsinfo from '@/mint-obj/mint-view/news/newsinfo'
 import error from '@/mint-obj/mint-view/error/error'
-
+import Gtable from '@/components/g-table'
 Vue.use(Router)
 
 export default new Router({
@@ -121,6 +121,11 @@ export default new Router({
           component: newsinfo,
         }
       ]
+    },
+    {
+      path:'/gtable',
+      name:'Gtable',
+      component:Gtable,
     },
     {
       path: '/error',
