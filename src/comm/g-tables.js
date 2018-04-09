@@ -21,9 +21,13 @@ export default {
   },
   render(h) {
     let _this = this;
+    // console.log(_this); render
+    // console.log(this);
     const ths = [];
     this.currentColumns.forEach((col, index) => {
+      console.log(col);
       if (col.sortable) {
+
         ths.push(h('th', [
           h('span', col.title),
           h('a', {
@@ -54,6 +58,7 @@ export default {
     });
     const trs = [];
     this.currentData.forEach(row => {
+      debugger
       const tds = [];
       _this.currentColumns.forEach(cell => {
         tds.push(h('td',{

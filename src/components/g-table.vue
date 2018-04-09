@@ -23,12 +23,12 @@
           {
             title: '年龄',
             key: 'age',
-            sortable: true,
+             sortable: true,//利用年龄排序
           },
           {
             title: '出生日期',
             key: 'birthday',
-          },
+          },　
           {
             title: '地址',
             key: 'address',

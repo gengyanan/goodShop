@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="index.css" media="all and (orientation:portrait)" >
+  <!--横屏-->
+  <link rel="stylesheet" href="index.css" media="all and (orientation:landscape)" >
+  <!--竖屏-->
+  <style>
+    .wrap{
+      width: 900px;
+      border:1px solid #000;
+      font:14px/28px '宋体';
+      color: #000;
+      text-indent: 2em;
+      -webkit-column-count:4 ;
+      -webkit-column-gap: 30px;
+      -webkit-column-rule: 1px solid #000;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+      border:1px solid #000000;
+      border-radius: 20px 40px 60px 80px/ 20px 40px 60px 80px;  /*x,y*/
+    }
+    .boxs{
+      width: 400px;
+      height: 400px;
+      margin:50px auto;
+     transition:1s linear;
+    }
+    .boxs:hover{
+      -webkit-transform: rotate(720deg);
+    }
+    .boxs div{
+      width: 180px;
+      height: 180px;
+      margin:10px ;
+      border:1px solid #000;
+      box-sizing: border-box;
+      float: left;
+      background: lightcoral;
+
+    }
+    .boxs div:nth-child(1), .boxs div:nth-child(4){
+      border-radius: 0 50%;
+    }
+    .boxs div:nth-child(2),.boxs div:nth-child(3){
+      border-radius:50% 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>
+      奔驰公司表示，定速巡航系统是车辆电子系统的一部分，可通过多种方式进行取消，且其运行状况可被多个相应的控制单元进行持续实时监测。若电控系统出现故障，相应的控制单元会存储故障代码。此外，车辆随时可由液压、机械制动系统进行减速停车；高速行进中，驾驶者试图通过开关车门及解开安全带进行减速属错误且危险操作。“相关报道中所述车辆多个系统同时失效的情况极为罕见，且一旦出现其将无法继续长途行进。”
+    </p>
+    <p>
+      基于以上信息，奔驰公司初步判断，“该车辆的定速巡航系统及驾驶系统当晚运行正常。”同时，该公司表示，这仅为目前根据可获取的相关信息所进行的推断，需要对车辆本身进行检测，才能获知车辆的真实情况。
+    </p>
+  </div>
+<div class="box"></div>
+<div class="boxs">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</body>
+</html>

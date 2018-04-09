@@ -19,6 +19,7 @@ import MyObj from '@/mint-obj/mint-obj'
 import mHome from '@/mint-obj/mint-view/home'
 import newslist from '@/mint-obj/mint-view/news/newslist'
 import sharelist from '@/mint-obj/mint-view/share/sharelist'
+import shareinfo from '@/mint-obj/mint-view/share/shareinfo'
 import newsinfo from '@/mint-obj/mint-view/news/newsinfo'
 import error from '@/mint-obj/mint-view/error/error'
 import Gtable from '@/components/g-table'
@@ -114,6 +115,11 @@ export default new Router({
           path: '/share/sharelist',
           name: 'sharelist',
           component: sharelist,
+        },
+        {
+          path: '/share/shareinfo',
+          name: 'shareinfo',
+          component: shareinfo,
         },
         {
           path: '/news/newsinfo/:id',
