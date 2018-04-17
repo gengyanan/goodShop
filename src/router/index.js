@@ -18,11 +18,18 @@ import MyObj from '@/mint-obj/mint-obj'
 
 import mHome from '@/mint-obj/mint-view/home'
 import newslist from '@/mint-obj/mint-view/news/newslist'
+import goodslist from '@/mint-obj/mint-view/goods/goodslist'
+import goodsinfo from '@/mint-obj/mint-view/goods/goodsinfo'
+import goodsdesc from '@/mint-obj/mint-view/goods/goodsdesc'
 import sharelist from '@/mint-obj/mint-view/share/sharelist'
 import shareinfo from '@/mint-obj/mint-view/share/shareinfo'
 import newsinfo from '@/mint-obj/mint-view/news/newsinfo'
 import error from '@/mint-obj/mint-view/error/error'
 import Gtable from '@/components/g-table'
+import SliderImg from '@/mint-obj/mint-view/subcom/sliderimg'
+
+//案例综合
+import  Case from '@/caseCollection/case'
 Vue.use(Router)
 
 export default new Router({
@@ -88,6 +95,11 @@ export default new Router({
       component: Content,
     },
     {
+      path:'/case',
+      name:"Case",
+      component:Case,
+    },
+    {
       path: '/tablelist',
       name: 'TableList',
       component: TableList,
@@ -105,6 +117,11 @@ export default new Router({
           path: '/mhome',
           name: 'mHome',
           component: mHome,
+        },
+        {
+          path:'/subcom/sliderimg',
+          name:'SliderImg',
+          component:SliderImg
         },
         {
           path: '/news/newslist',
@@ -125,7 +142,22 @@ export default new Router({
           path: '/news/newsinfo/:id',
           name: 'newsinfo',
           component: newsinfo,
-        }
+        },
+        {
+          path:'/goods/goodslist',
+          name:'goodslist',
+          component:goodslist,
+        },
+        {
+          path:'/goods/goodsdesc',
+          name:'goodsdesc',
+          component:goodsdesc,
+        },
+        {
+          path: '/goods/goodsinfo',
+          name: 'goodsinfo',
+          component: goodsinfo,
+        },
       ]
     },
     {

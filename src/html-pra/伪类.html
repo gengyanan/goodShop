@@ -80,5 +80,79 @@
   <div>4</div>
   <div>5</div>
 </div>
+
+<p id="demo">id="demo" 的 p 元素</p>
+<p class='list'> 点击按钮修改 id="demo" 的 p 元素内容</p>
+<p class='list'> 点击按钮修改 id="demo" 的 p 元素内容</p>
+<button onclick="myFunction()" id="btnfn">点我</button>
+<input type="text" value="1" id="t">
+<button id="btn">按钮</button>
 </body>
+<script>
+  window.onload=function () {
+    let t=document.querySelector('#t');
+    let btn=document.querySelector('#btn');
+    let btnfn=document.querySelector('#btnfn');
+    let list=document.querySelectorAll('.list');
+    let i=0;
+    // alert(++i==i++);
+    btn.onclick=function () {
+      var v=t.value;
+      console.log(v);
+    }
+    btnfn.onclick=function () {
+      console.log(123);
+      for(let i=0;i<list.length;i++){
+        list[i].innerHTML='nihao';
+      }
+
+    }
+    let a={
+      i:1,
+      toString:function () {
+        return a.i++;
+      },
+      toPrimitive:function () {
+        console.log(a.i);
+        return a.i++;
+      }
+    };
+    console.log(a == 1 && a == 2 && a == 3);
+    function fn1() {
+      var cc=0;
+      function fn2() {
+        ++cc;
+        console.log(cc);
+      }
+      return fn2
+    }
+    fn1()();//1
+
+    var newFn=fn1();
+    newFn();//1
+    newFn();//2
+    console.log(window.navigator);
+
+    var fn=new Fn();
+    function Fn() {
+      this.name='miaov';
+      this.address='北京';
+      return {}
+    }
+
+    console.log(fn.name);
+
+    var x=1;
+    function fns(n) {
+      debugger
+      n=n+1;
+      return n;
+    }
+
+    let y=fns(x);
+
+    console.log(y);
+  }
+
+</script>
 </html>

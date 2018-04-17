@@ -1,10 +1,6 @@
 <template>
   <i-row class="ivu-row-main">
-    <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="(item,index) in list">
-        <img :src="item.image" alt="">
-      </mt-swipe-item>
-    </mt-swipe>
+    <sliderimg :imgs="list" :height="height"></sliderimg>
     <div id="Gallery" class="mui-slider" style="margin-top:15px;">
       <div class="mui-slider-group">
         <div class="mui-slider-item">
@@ -54,11 +50,16 @@
 
 <script>
   import {Toast} from 'mint-ui';
+  import Sliderimg from "./subcom/sliderimg";
   export default {
+    components: {
+      Sliderimg,
+      },
     name: "myhome",
     data() {
       return {
-        list: []
+        list: [],
+        height:150+'px',
       }
     },
     created() {

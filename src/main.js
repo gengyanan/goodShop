@@ -14,7 +14,6 @@ import filter from '@/filters'
 import Util from './api/util'
 import '@/assets/css/mui.min.css'
 import directive from '@/directive'
-
 Vue.config.productionTip = false
 Vue.prototype.$axios=Util;
 Vue.use(router);
