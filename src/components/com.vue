@@ -33,8 +33,9 @@
 </template>
 
 <script>
-  import InputNumber from "./input-number";
+  import InputNumber from "./inptnumber";
   import {timer} from "../directive/index";
+  import {hide} from "../comm/clickoutside";
   import Anchor from "../comm/anchor1";
 import AnchorSlot from '../comm/anchorSlot'
   import SmartCont from '../comm/smartCont'

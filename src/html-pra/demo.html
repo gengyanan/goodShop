@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /*回到顶部样式*/
+    #tbox {
+      bottom:60px;
+      float: right;
+      position: fixed;
+      right:30px;
+      width: 40px;
+      height: 165px;
+    }
+
+    #pinglun, #xiangguan, #gotop, #help {
+      position: relative;
+      background:url("../img/ewm.png") no-repeat scroll 0 0;
+      display: block;
+      margin: 5px 0;
+    }
+    #horn{
+      width:39px ;
+      height: 40px;
+      display:block;
+      background: url('../img/chain-goods/horn.jpg') no-repeat ;
+    }
+    #horn .prompt{
+      padding: 30px;
+      background: #e9971c;
+      color: #fff;
+      font-size: 13px;
+      line-height: 24px;
+      position: absolute;
+      left: -172px;
+      width: 92px;
+      height: 94px;
+      bottom: 10px;
+    }
+    #pinglun .img{
+      position: absolute;
+      background-size:100% auto;
+      background: url("../img/xw-kefu-index.png") no-repeat;
+      width: 124px;
+      height: 141px;
+      right: 62px;
+      top: 0;
+      padding: 0;
+      display: none;
+    }
+    #pinglun:hover .img{
+      display: block;
+    }
+
+    #xiangguan {
+      height: 40px;
+      position: relative;
+      width: 40px;
+      background-position:-128px 0px;
+    }
+    #xiangguan:hover {
+      height: 40px;
+      position: relative;
+      width: 40px;
+      background-position: -186px 0px;
+    }
+    #pinglun {
+      height: 40px;
+      width: 40px;
+      background-position:-128px -43px;
+    }
+    #pinglun:hover {
+      height: 40px;
+      position: relative;
+      width: 40px;
+      background-position: -186px -43px;
+    }
+    #help {
+      height: 40px;
+      width: 40px;
+      background-position: -128px -83px;
+    }
+    #help:hover {
+      height: 40px;
+      position: relative;
+      width: 40px;
+      background-position: -186px -83px;
+    }
+    #gotop {
+      height: 40px;
+      width: 40px;
+      background-position: -128px -126px;
+    }
+    #gotop:hover {
+      height: 40px;
+      position: relative;
+      width: 40px;
+      background-position: -186px -126px;
+    }
+  </style>
+</head>
+<body>
+<div id="tbox" class="visible-desktop" style="z-index: 100;">
+  <a id="horn" href="#tag_about">
+    <div class="prompt" style="display: block;">历史年化收益非实际收益承诺；出借有风险，选择需谨慎</div>
+  </a>
+  <a id="xiangguan" href="#tag_about">
+    <div class="moquu_wxinh" style="display: block;"></div>
+  </a>
+  <a id="pinglun" href="####" title="微信客服">
+                <span class="img ta-c" title="微信客服">
+                </span>
+  </a>
+  <a id="help" href="<c:url value='/resources/xwch-bangz.html'/>"></a>
+  <a id="gotop" href="#" style="display: block;"></a>
+</div>
+</body>
+</html>

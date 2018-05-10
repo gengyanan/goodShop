@@ -21,6 +21,8 @@ import newslist from '@/mint-obj/mint-view/news/newslist'
 import goodslist from '@/mint-obj/mint-view/goods/goodslist'
 import goodsinfo from '@/mint-obj/mint-view/goods/goodsinfo'
 import goodsdesc from '@/mint-obj/mint-view/goods/goodsdesc'
+import goodscomments from '@/mint-obj/mint-view/goods/goodscomments'
+import goodscar from '@/mint-obj/mint-view/goods/goodscar'
 import sharelist from '@/mint-obj/mint-view/share/sharelist'
 import shareinfo from '@/mint-obj/mint-view/share/shareinfo'
 import newsinfo from '@/mint-obj/mint-view/news/newsinfo'
@@ -152,6 +154,16 @@ export default new Router({
           path:'/goods/goodsdesc',
           name:'goodsdesc',
           component:goodsdesc,
+        },
+        {
+          path:'/goods/goodscar',
+          name:'goodscar',
+          component:goodscar,
+        },
+        {
+          path:'/goods/goodscomments',
+          name:'goodscomments',
+          component:goodscomments,
         },
         {
           path: '/goods/goodsinfo',

@@ -14,6 +14,7 @@ import filter from '@/filters'
 import Util from './api/util'
 import '@/assets/css/mui.min.css'
 import directive from '@/directive'
+import store from '../src/mint-obj/mint-view/store'
 Vue.config.productionTip = false
 Vue.prototype.$axios=Util;
 Vue.use(router);
@@ -28,6 +29,7 @@ new Vue({
   router,
   filter,
   directive,
+  store,
   components: { App },
   template: '<App/>'
 })

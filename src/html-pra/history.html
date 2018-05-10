@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>彩票的引用</title>
+</head>
+<body>
+<button type="primary" id="btn">35选7</button>
+
+<div id="num"></div>
+</body>
+<script>
+  var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+  myFish.splice(2, 0, 'drum');
+  console.log(myFish);
+  let btn = document.querySelector('#btn');
+  let num = document.querySelector('#num');
+  let iNow=1;
+  btn.onclick = function () {
+    let number = randerm(35, 7);
+    num.innerHTML = number;
+    //历史记录的管理
+    history.pushState(number, '',iNow++);
+  }
+  window.addEventListener('popState',(ev)=>{
+    let number=ev.state || "";
+    number.innerHTML=number;
+  })
+
+
+  /**
+   *
+   * @param alls 35
+   * @param now  7
+   * @returns {Array}
+   */
+  function randerm(alls, now) {
+    let arr = [];
+    let news = [];
+    for (let i = 1; i <= alls; i++) {
+      arr.push(i);
+    }
+    for (let j = 0; j < now; j++) {
+      news.push(arr.splice(Math.floor(Math.random()*arr.length),1))
+    }
+    return news;
+  }
+</script>
+</html>

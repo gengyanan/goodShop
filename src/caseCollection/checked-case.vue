@@ -11,6 +11,46 @@
       <li v-for="(cicty,index) in listData" :class="{'checkeds':cicty.checked}" @click="chooseClick(cicty)">{{cicty.name}}</li>
     </ul>
 {{checkedTotal}}
+
+
+    <!--<i-input @keyup.enter.native="query" placeholder="部门" :value="searchParam.ids" @focus="showCard">-->
+    <!--</i-input>-->
+    <!--<div @click="showCard" :value="searchParam.ids" class="i-text">点击</div>-->
+    <!--<i-card :bordered="true" type="flex" class="i-item" v-show="showlist" >-->
+    <!--<div class="i-wrap">-->
+    <!--<p v-for="(item,index) in departmentList">-->
+    <!--<Checkbox v-model="item.id"><span>{{item.departname}}</span></Checkbox>-->
+    <!--</p>-->
+    <!--</div>-->
+
+    <!--<div class="t-r i-btn">-->
+    <!--<i-button type="primary" @click="handleIds">确定</i-button>-->
+    <!--</div>-->
+    <!--</i-card>
+    .i-text{
+    border:1px solid #e9eaec;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .i-item{
+    position: absolute;
+    z-index: 9;
+    width: 112%;
+
+  }
+  .i-wrap{
+    max-height: 100px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+  .i-btn{
+    padding-top: 20px;
+    border-top: 1px solid #e9eaec;
+  }
+
+
+    -->
   </i-row>
 </template>
 

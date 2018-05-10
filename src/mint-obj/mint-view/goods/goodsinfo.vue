@@ -9,13 +9,12 @@
       <ul class="list-ul">
         <li><span class="mr-10">市场价¥{{InfoList.market_price}}</span> <span class="mr-10">销售价¥{{InfoList.sell_price}}</span></li>
         <li><span class="mr-10">购买数量</span>
-          <mt-button class="mr-10">-</mt-button>
-          <mt-button class="mr-10">1</mt-button>
-          <mt-button class="ml-10">+</mt-button>
+          <inptnumber v-model="value" :max="10" :min="0" v-focus></inptnumber>
         </li>
         <li>
           <mt-button class="mr-10" type="primary" span="24">立即购买</mt-button>
           <mt-button type="primary" span="24">购物车</mt-button>
+          <div class="ball"></div>
         </li>
       </ul>
     </i-card>
@@ -34,7 +33,7 @@
 
         </li>
         <li>
-          <router-link to="/goods/">
+          <router-link to="/goods/goodscomments">
             <i-button type="warning" long>商品评论</i-button>
           </router-link>
 
@@ -48,9 +47,13 @@
   import Sliderimg from "../subcom/sliderimg";
   import Toast from 'mint-ui'
   import MtButton from "mint-ui/packages/button/src/button";
+  import InputNumber from "iview/src/components/input-number/input-number";
+  import Inptnumber from "../../../components/inptnumber";
 
   export default {
     components: {
+      Inptnumber,
+      InputNumber,
       MtButton,
       Sliderimg
     },
@@ -61,6 +64,7 @@
         goodsImg: [],
         height: 300 + 'px',
         InfoList:[],
+        value:0,
       }
     },
     created() {
@@ -123,9 +127,7 @@
   }
 
   .list-ul li {
-    margin-bottom: 20px;
-    text-align: center;
-
+    margin-bottom: 60px;
   }
 
   .mint-button {
@@ -134,5 +136,14 @@
 
   .mr-10 {
     margin-right: 10px;
+  }
+  .ball{
+    width: 20px;
+    height: 20px;
+    background: red;
+    position: absolute;
+    left: 182px;
+    top: 94px;
+    border-radius: 50%;
   }
 </style>

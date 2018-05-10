@@ -27,13 +27,16 @@
             <a href="http://www.apple.com" @click="handleClick('禁止打开',$event)">打开链接</a>
         </i-col>
 
-
+        <tables></tables>
     </i-row>
 </template>
 
 <script>
+    import Tables from "./tables";
+
     export default {
-        name: "index",
+      components: {Tables},
+      name: "index",
         data() {
             return {
                 message: 'nnisss',

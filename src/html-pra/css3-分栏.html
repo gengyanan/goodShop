@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="index.css" media="all and (orientation:portrait)" >
   <!--横屏-->
   <link rel="stylesheet" href="index.css" media="all and (orientation:landscape)" >
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!--竖屏-->
   <style>
     .wrap{
@@ -69,5 +70,11 @@
   <div></div>
   <div></div>
 </div>
+<button >加载</button>
+<div id="loading" style="width: 100%;height: 100%;"></div>
 </body>
+<script>
+$('#loading').load('demo.html');
+
+</script>
 </html>
